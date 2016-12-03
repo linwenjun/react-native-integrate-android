@@ -26,17 +26,14 @@ public class HomeActivity extends Activity {
 
     public void clickHandler(View source) {
         Button target  = (Button) source;
-
-
         String newPage = idPageMap.get(target.getId());
-
-
-
         Toast.makeText(this, newPage, Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent();
         intent.setClass(getApplicationContext(), MainActivity.class);
         intent.putExtra("data", newPage);
         startActivity(intent);
+        finish();
+        overridePendingTransition(0, 0);
     }
 }

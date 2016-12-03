@@ -39,5 +39,7 @@ public class JNIntentModule extends ReactContextBaseJavaModule {
     public void goNative(String data) {
         Toast.makeText(getReactApplicationContext(), data + "", Toast.LENGTH_SHORT).show();
         getCurrentActivity().startActivity(new Intent(getCurrentActivity(), HomeActivity.class));
+        getCurrentActivity().finish();
+        getCurrentActivity().overridePendingTransition(0, 0);
     }
 }
