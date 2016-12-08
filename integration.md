@@ -33,7 +33,7 @@ data: String
 
 ### React Native 跳转至原生 Android 
 
-以下为Java代码中，开放被react-native调用函数，在此函数中，应根据page和data的不同，而进行跳转
+以下为Java代码中作为Module开放给React-native，被react-native调用，在此函数中，应根据page和data的不同，而进行跳转
 
 ```java
 package com.jnexpert.rnbridge;
